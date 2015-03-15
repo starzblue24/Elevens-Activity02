@@ -20,8 +20,8 @@ public class DeckTester {
     values[0] = 1;
     values[1] = 12;
     values[2] = 13;
-    Deck d1 = new Deck(ranks, suits, value);
-    Deck d2 = new Deck(ranks, suits, value);
+    Deck d1 = new Deck(ranks, suits, values);
+    Deck d2 = new Deck(ranks, suits, values);
     Deck d3 = new Deck(ranks, suits, values);
     System.out.println(d3.isEmpty());
     
