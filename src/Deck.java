@@ -31,9 +31,10 @@ public class Deck {
    */
   public Deck(String[] ranks, String[] suits, int[] values) {
     Card card;
+    cards = new ArrayList<Card>();
     for(int r = 0; r<ranks.length; r++){
       for(int s = 0; s<suits.length; s++){
-        card=new Card(ranks[r], suits[s], values[r]);
+        card = new Card(ranks[r], suits[s], values[r]);
         cards.add(card);
       }
     }
@@ -46,12 +47,7 @@ public class Deck {
    * @return true if this deck is empty, false otherwise.
    */
   public boolean isEmpty() {
-    if(cards.size()==0){
-      return true;
-    }
-    else{
-      return false;
-    }
+    return cards.size()==0;
   }
   
   /**
@@ -59,7 +55,7 @@ public class Deck {
    * @return the number of undealt cards in this deck.
    */
   public int size() {
-    return cards.size();
+    return size;
   }
   
   /**
@@ -67,16 +63,7 @@ public class Deck {
    * and reset the size to represent the entire deck.
    */
   public void shuffle() {
-    
     /* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
-    /*Card c;
-     for(int i=0; i<swaps; i++)
-     {
-     //removes random card from deck, and adds it to the bottom. 
-     c=removeRandomCard();
-     this.addCardToBottom(c);
-     }
-     } */
   }
   
   /**
